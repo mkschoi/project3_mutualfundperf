@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Webpage</title>
+</head>
+
+<body>
+  <form action="/predict">
+    {% for f in feature_names %}
+        <br>
+        {{ f }}
+        <br>
+        <input type="text" name="{{ f }}" value="{{x_input[loop.index0]}}">
+    {% endfor %}
+    <br>
+    <input type="submit" value="Submit" method="get">
+  </form>
+
+  <p>
+    Prediction:
+    {% for p in prediction %}
+      <br>  {{ p['name'] }} ...... {{ 100 * p['prob'] | round(4) }}%
+    {% endfor %}
+  </p>
+
+</body>
+
+</html>

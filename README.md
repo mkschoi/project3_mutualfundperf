@@ -24,7 +24,7 @@ Performing some EDA, we can see that the selected features show a lot more class
 
 Selected Features | Non-selected Features
 ------------ | -------------
-![](Charts/dist_%assets_top10.png) | ![](Charts/dist_turnover.png)
+![](Charts/dist_assets_top10.png) | ![](Charts/dist_turnover.png)
 ![](Charts/dist_debt_to_capital.png) | ![](Charts/dist_manager_tenure.png)
 
 ### Cross-validation and Hyperparameter Tuning through GridSearchCV
@@ -37,10 +37,12 @@ Selected Features | Non-selected Features
 
 - In my final model testing using random forest, my scores came out lower meaning I slightly overfit, and my recall score came in a bit lower than precision score. 
 
+------------ | -------------
 ![](Charts/model_test_results.png) | ![](Charts/test_confusion_matrix.png)
 
 - Increasing recall simply means minimizing the risk of missing out on outperforming funds, at the expense of increasing the risk of selecting underperforming funds. So where one sits on this precision/recall trade-off curve depends on the investor’s risk appetite. For example, if an investor is okay with not going for big wins but hates losing money or underperforming the benchmark, he or she will increase the probability threshold to get higher precision.  
 
+------------ | -------------
 ![](Charts/test_precision_recall_thres.png) | ![](Charts/test_precision_recall.png)
 
 - Finally, our question on whether one should put their money with mutual funds or index funds. If we look at the chart on the right, an increase in % assets in top 10 holdings results in higher probability of outperformance. Why would that be? One logical reason is that higher % of assets in top 10 holdings means each stock takes up a larger % of the entire portfolio, and that usually reflects the high conviction a fund manager has in that stock supported by weeks or months of research on it. And that unsurprisingly has a higher chance of outperforming than just randomly picking a stock from an index. 
@@ -51,6 +53,7 @@ Selected Features | Non-selected Features
 
 - All things considered, there is an argument to be made here that it is worth paying the higher fees of a mutual fund if top four of the five conditions above are met. Note that I don’t believe simply investing in funds with high % assets in top 10 holdings or high ROE guarantee success, because if investing was that easy, everyone would do it. I think we can use these features as initial screening criteria to narrow down the candidates and then perform further investigative research on those funds.  
 
+------------ | -------------
 ![](Charts/feature_importance.png) | ![](Charts/favor_stock_picking.png)
 
 

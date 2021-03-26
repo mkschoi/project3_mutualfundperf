@@ -66,7 +66,7 @@ Selected Features | Non-selected Features
 - Click [here](Web_app/web_app_demo.mov) for a demo of my simple web app created using Flask.
 
 
-**Further plots and results can be found in the [project presentation](Presentation/Metis_Project3_PPT_vF.pdf). The main project code can by found in the three Jupyter notebook files located [here](Notebooks).**
+**Further plots and results can be found in the [project presentation](Presentation/Metis_Project3_PPT_vF.pdf). The main project code can by found in .py files and Jupyter notebooks located [here](Code).**
 
 
 
